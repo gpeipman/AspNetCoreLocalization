@@ -1,6 +1,6 @@
 # AspNetCoreLocalization
 
-This is sample solution for my blog post [ASP.NET Core: Simple localization and language based URL-s](gunnarpeipman.com/2017/03/aspnet-core-simple-localization/). I have got many requests to publish working sample and here it is.
+This is sample solution for my blog post [ASP.NET Core: Simple localization and language based URL-s](http://gunnarpeipman.com/2017/03/aspnet-core-simple-localization/). I have got many requests to publish working sample and here it is.
 
 ## Some notes
 
