@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Globalization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Localization;
@@ -26,7 +26,7 @@ namespace WebApplication1
                 SupportedUICultures = supportedCultures
             };
 
-            options.RequestCultureProviders = new[] { new RouteDataRequestCultureProvider() { Options = options } };
+            options.RequestCultureProviders = new[] { new RouteDataRequestCultureProvider() { Options = options, RouteDataStringKey = "lang", UIRouteDataStringKey = "lang" } };
 
             app.UseRequestLocalization(options);
         }
