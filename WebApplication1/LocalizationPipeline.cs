@@ -26,7 +26,14 @@ namespace WebApplication1
                 SupportedUICultures = supportedCultures
             };
 
-            options.RequestCultureProviders = new[] { new RouteDataRequestCultureProvider() { Options = options } };
+            options.RequestCultureProviders = new[] { 
+                new RouteDataRequestCultureProvider() 
+                { 
+                    Options = options, 
+                    RouteDataStringKey = "lang",
+                    UIRouteDataStringKey = "lang"
+                } 
+            };
 
             app.UseRequestLocalization(options);
         }

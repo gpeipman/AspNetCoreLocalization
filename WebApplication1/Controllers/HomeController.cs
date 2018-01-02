@@ -6,7 +6,7 @@ namespace WebApplication1.Controllers
 {
     [MiddlewareFilter(typeof(LocalizationPipeline))]
     public class HomeController : BaseController
-    {
+    { 
         public IActionResult Index()
         {
             return View();
