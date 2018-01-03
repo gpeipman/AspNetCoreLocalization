@@ -117,7 +117,25 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="About" xml:space="preserve">
+    <value>около</value>
+  </data>
+  <data name="DataAnnotations" xml:space="preserve">
+    <value>Локализованные аннотации данных</value>
+  </data>
+  <data name="EmailRequired" xml:space="preserve">
+    <value>Поле электронной почты требуется</value>
+  </data>
   <data name="HelloWorld" xml:space="preserve">
     <value>Привет мир!</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Главная</value>
+  </data>
+  <data name="PasswordRequired" xml:space="preserve">
+    <value>Поле пароля обязательное</value>
+  </data>
+  <data name="SignIn" xml:space="preserve">
+    <value>войти</value>
   </data>
 </root>

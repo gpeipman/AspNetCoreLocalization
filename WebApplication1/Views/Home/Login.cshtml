@@ -1,0 +1,28 @@
+﻿@model WebApplication1.Models.HomeViewModels.LoginViewModel
+@inject CustomLocalizer localizer
+
+<div class="row">
+    <div class="col-md-4">
+        <section>
+            <form method="post">
+                <h4>@localizer["DataAnnotations"]</h4>
+                <hr />
+                <div class="form-group">
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input asp-for="Password" class="form-control" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-default">@localizer["SignIn"]</button>
+                </div>
+            </form>
+        </section>
+    </div>
+</div>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}
