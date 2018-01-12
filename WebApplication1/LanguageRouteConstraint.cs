@@ -14,7 +14,7 @@ namespace WebApplication1
 
             var lang = values["lang"].ToString();
 
-            return lang == "ee" || lang == "en" || lang == "ru";
+            return lang == "et" || lang == "en" || lang == "ru";
         }
     }
 }

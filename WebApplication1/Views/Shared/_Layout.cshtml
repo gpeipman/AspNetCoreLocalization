@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@inject CustomLocalizer localizer
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -26,22 +27,33 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">WebApplication1</a>
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">AspNetCoreLocalization</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index" asp-route-lang="ee">Home (et)</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index" asp-route-lang="ru">Home (ru)</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Index">@localizer["Home"]</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Login">@localizer["SignIn"]</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="About">@localizer["About"]</a></li>
                 </ul>
             </div>
         </div>
     </nav>
     <div class="container body-content">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; 2017 - WebApplication1</p>
+
+        @{
+            string currentController = ViewContext.RouteData.Values["Controller"].ToString();
+            string currentAction = ViewContext.RouteData.Values["Action"].ToString();
+        }
+
+        <footer class="navbar-inverse navbar-fixed-bottom">
+            <div class="container-fluid">
+                <ul class="nav navbar-nav">
+                    <li is-active-language asp-route-lang="en"><a asp-controller=@currentController asp-action=@currentAction asp-route-lang="en">English</a></li>
+                    <li is-active-language asp-route-lang="et"><a asp-controller=@currentController asp-action=@currentAction asp-route-lang="et">Eesti keel</a></li>
+                    <li is-active-language asp-route-lang="ru"><a asp-controller=@currentController asp-action=@currentAction asp-route-lang="ru">русский</a></li>
+                </ul>
+            </div>
         </footer>
     </div>
 

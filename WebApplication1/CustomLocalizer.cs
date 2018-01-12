@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.Localization;
-using WebApplication1.Resources;
 
 namespace WebApplication1
 {
@@ -17,10 +16,10 @@ namespace WebApplication1
             {
                 CurrentLanguage = "en";
             }
-            if (CurrentLanguage == "ee")
-            {
-                CurrentLanguage = "et";
-            }
+            //if (CurrentLanguage == "ee")
+            //{
+            //    CurrentLanguage = "et";
+            //}
 
             _internalLocalizer = WithCulture(new CultureInfo(CurrentLanguage));
         }
