@@ -118,7 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="About" xml:space="preserve">
-    <value>Umbes</value>
+    <value>Leheküljest</value>
+  </data>
+  <data name="Contacts" xml:space="preserve">
+    <value>Kontaktid</value>
   </data>
   <data name="DataAnnotations" xml:space="preserve">
     <value>Lokaliseeritud andmete annotatsioonid</value>
@@ -127,7 +130,7 @@
     <value>E-post</value>
   </data>
   <data name="EmailRequired" xml:space="preserve">
-    <value>E-posti väli on kohustuslik</value>
+    <value>E-posti sisestamine on kohustuslik</value>
   </data>
   <data name="HelloWorld" xml:space="preserve">
     <value>Tere maailm!</value>
@@ -139,7 +142,7 @@
     <value>Parool</value>
   </data>
   <data name="PasswordRequired" xml:space="preserve">
-    <value>Parooli väli on kohustuslik</value>
+    <value>Parooli sisestamine on kohustuslik</value>
   </data>
   <data name="SignIn" xml:space="preserve">
     <value>Logi sisse</value>

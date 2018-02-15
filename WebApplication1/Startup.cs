@@ -22,15 +22,15 @@ namespace WebApplication1
             services.AddLocalization(options => options.ResourcesPath = "Resources");
 
             services.AddMvc()
-                    .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
                     .AddDataAnnotationsLocalization(options =>
                     {
                         options.DataAnnotationLocalizerProvider = (type, factory) =>
                             factory.Create(typeof(Common));
                     })
-                    .AddViewLocalization(LanguageViewLocationExpanderFormat.SubFolder & 
-                                            LanguageViewLocationExpanderFormat.Suffix);
-                        
+                    .AddViewLocalization(LanguageViewLocationExpanderFormat.SubFolder)
+                    .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix);
+
+            
             services.Configure<RouteOptions>(options =>
             {
                 options.ConstraintMap.Add("lang", typeof(LanguageRouteConstraint));
@@ -54,6 +54,7 @@ namespace WebApplication1
             app.UseStaticFiles();
 
             var options = app.ApplicationServices.GetService<IOptions<RequestLocalizationOptions>>();
+            LocalizationPipeline.ConfigureOptions(options.Value);
             app.UseRequestLocalization(options.Value);
 
             app.UseMvc(routes =>

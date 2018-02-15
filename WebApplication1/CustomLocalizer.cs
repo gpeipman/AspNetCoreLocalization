@@ -1,4 +1,5 @@
-﻿using System.Globalization;
+﻿using System.Diagnostics;
+using System.Globalization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.Localization;
@@ -9,6 +10,10 @@ namespace WebApplication1
     {
         private readonly IStringLocalizer _internalLocalizer;
 
+        public CustomLocalizer(IStringLocalizerFactory factory) : base(factory)
+        {
+
+        }
         public CustomLocalizer(IStringLocalizerFactory factory, IHttpContextAccessor httpContextAccessor) : base(factory)
         {
             CurrentLanguage = httpContextAccessor.HttpContext.GetRouteValue("lang") as string;
@@ -16,10 +21,6 @@ namespace WebApplication1
             {
                 CurrentLanguage = "en";
             }
-            //if (CurrentLanguage == "ee")
-            //{
-            //    CurrentLanguage = "et";
-            //}
 
             _internalLocalizer = WithCulture(new CultureInfo(CurrentLanguage));
         }

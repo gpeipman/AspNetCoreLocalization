@@ -10,7 +10,14 @@ namespace WebApplication1
     {
         public void Configure(IApplicationBuilder app)
         {
+            var options = new RequestLocalizationOptions();
+            ConfigureOptions(options);
 
+            app.UseRequestLocalization(options);
+        }
+
+        public static void ConfigureOptions(RequestLocalizationOptions options)
+        {
             var supportedCultures = new List<CultureInfo>
                                 {
                                     new CultureInfo("en"),
@@ -18,24 +25,17 @@ namespace WebApplication1
                                     new CultureInfo("ru"),
                                 };
 
-            var options = new RequestLocalizationOptions()
-            {
-
-                DefaultRequestCulture = new RequestCulture(culture: "en", uiCulture: "en"),
-                SupportedCultures = supportedCultures,
-                SupportedUICultures = supportedCultures
-            };
-
-            options.RequestCultureProviders = new[] { 
-                new RouteDataRequestCultureProvider() 
-                { 
-                    Options = options, 
+            options.DefaultRequestCulture = new RequestCulture(culture: "en", uiCulture: "en");
+            options.SupportedCultures = supportedCultures;
+            options.SupportedUICultures = supportedCultures;
+            options.RequestCultureProviders = new[] {
+                new RouteDataRequestCultureProvider()
+                {
+                    Options = options,
                     RouteDataStringKey = "lang",
                     UIRouteDataStringKey = "lang"
-                } 
+                }
             };
-
-            app.UseRequestLocalization(options);
         }
     }
 }

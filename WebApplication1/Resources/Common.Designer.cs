@@ -10,8 +10,9 @@
 
 namespace WebApplication1 {
     using System;
-    
-    
+    using System.Diagnostics;
+
+
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -70,6 +71,15 @@ namespace WebApplication1 {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Contacts.
+        /// </summary>
+        public static string Contacts {
+            get {
+                return ResourceManager.GetString("Contacts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Localized data annotations.
         /// </summary>
         public static string DataAnnotations {
@@ -83,6 +93,7 @@ namespace WebApplication1 {
         /// </summary>
         public static string Email {
             get {
+                Debug.WriteLine("ASK: Email");
                 return ResourceManager.GetString("Email", resourceCulture);
             }
         }

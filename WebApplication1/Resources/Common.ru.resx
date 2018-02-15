@@ -120,8 +120,14 @@
   <data name="About" xml:space="preserve">
     <value>Около</value>
   </data>
+  <data name="Contacts" xml:space="preserve">
+    <value>Контакты</value>
+  </data>
   <data name="DataAnnotations" xml:space="preserve">
     <value>Локализованные аннотации данных</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Электронная почта</value>
   </data>
   <data name="EmailRequired" xml:space="preserve">
     <value>Поле электронной почты требуется</value>
@@ -131,6 +137,9 @@
   </data>
   <data name="Home" xml:space="preserve">
     <value>Главная</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Парол</value>
   </data>
   <data name="PasswordRequired" xml:space="preserve">
     <value>Поле пароля обязательное</value>
