@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace WebApplication1.Models.HomeViewModels
 {
     public class LoginViewModel
     {
+        [Display(Name ="Email", ResourceType = typeof(WebApplication1.Common))]
         [Required(ErrorMessage = "EmailRequired")]
         [EmailAddress]
         public string Email { get; set; }

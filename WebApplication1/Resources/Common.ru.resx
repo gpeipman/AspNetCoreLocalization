@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="About" xml:space="preserve">
-    <value>около</value>
+    <value>Около</value>
   </data>
   <data name="DataAnnotations" xml:space="preserve">
     <value>Локализованные аннотации данных</value>
@@ -136,6 +136,6 @@
     <value>Поле пароля обязательное</value>
   </data>
   <data name="SignIn" xml:space="preserve">
-    <value>войти</value>
+    <value>Войти</value>
   </data>
 </root>

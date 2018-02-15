@@ -123,6 +123,9 @@
   <data name="DataAnnotations" xml:space="preserve">
     <value>Localized data annotations</value>
   </data>
+  <data name="Email" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
   <data name="EmailRequired" xml:space="preserve">
     <value>Email field is required</value>
   </data>
@@ -131,6 +134,9 @@
   </data>
   <data name="Home" xml:space="preserve">
     <value>Home</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password</value>
   </data>
   <data name="PasswordRequired" xml:space="preserve">
     <value>Password field is required</value>

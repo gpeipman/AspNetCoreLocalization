@@ -123,6 +123,9 @@
   <data name="DataAnnotations" xml:space="preserve">
     <value>Lokaliseeritud andmete annotatsioonid</value>
   </data>
+  <data name="Email" xml:space="preserve">
+    <value>E-post</value>
+  </data>
   <data name="EmailRequired" xml:space="preserve">
     <value>E-posti väli on kohustuslik</value>
   </data>
@@ -130,7 +133,10 @@
     <value>Tere maailm!</value>
   </data>
   <data name="Home" xml:space="preserve">
-    <value>Kodu</value>
+    <value>Esileht</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Parool</value>
   </data>
   <data name="PasswordRequired" xml:space="preserve">
     <value>Parooli väli on kohustuslik</value>

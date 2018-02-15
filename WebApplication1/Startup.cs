@@ -22,12 +22,15 @@ namespace WebApplication1
             services.AddLocalization(options => options.ResourcesPath = "Resources");
 
             services.AddMvc()
-                .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
-                .AddDataAnnotationsLocalization(options => {
-                    options.DataAnnotationLocalizerProvider = (type, factory) =>
-                        factory.Create(typeof(Common));
-                });
-
+                    .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
+                    .AddDataAnnotationsLocalization(options =>
+                    {
+                        options.DataAnnotationLocalizerProvider = (type, factory) =>
+                            factory.Create(typeof(Common));
+                    })
+                    .AddViewLocalization(LanguageViewLocationExpanderFormat.SubFolder & 
+                                            LanguageViewLocationExpanderFormat.Suffix);
+                        
             services.Configure<RouteOptions>(options =>
             {
                 options.ConstraintMap.Add("lang", typeof(LanguageRouteConstraint));

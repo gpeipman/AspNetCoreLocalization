@@ -32,8 +32,9 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a asp-area="" asp-controller="Home" asp-action="Index">@localizer["Home"]</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Login">@localizer["SignIn"]</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="About">@localizer["About"]</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Contacts">@localizer["Contacts"]</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Login">@localizer["SignIn"]</a></li>
                 </ul>
             </div>
         </div>
@@ -50,8 +51,8 @@
             <div class="container-fluid">
                 <ul class="nav navbar-nav">
                     <li is-active-language asp-route-lang="en"><a asp-controller=@currentController asp-action=@currentAction asp-route-lang="en">English</a></li>
-                    <li is-active-language asp-route-lang="et"><a asp-controller=@currentController asp-action=@currentAction asp-route-lang="et">Eesti keel</a></li>
-                    <li is-active-language asp-route-lang="ru"><a asp-controller=@currentController asp-action=@currentAction asp-route-lang="ru">русский</a></li>
+                    <li is-active-language asp-route-lang="et"><a asp-controller=@currentController asp-action=@currentAction asp-route-lang="et">Eesti</a></li>
+                    <li is-active-language asp-route-lang="ru"><a asp-controller=@currentController asp-action=@currentAction asp-route-lang="ru">Русский</a></li>
                 </ul>
             </div>
         </footer>
